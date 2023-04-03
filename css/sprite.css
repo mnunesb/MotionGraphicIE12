@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+body {
+	font-family: sans-serif;
+}
+
+/* STEP 1: Style the dude */
+#dude {
+	position: absolute;
+	left: 300px;
+	top: 200px;
+	height: 77px;
+	width: 60px;
+	background: url("/images/sprite-sheet.png");
+}
+
+/* STEP 3a: Add a class that binds the animation to the element (you'll need to manually add the class in the HTML) */
+.go {
+	animation-name: go;
+	animation-duration: 4s;
+	animation-timing-function: steps(4);
+	animation-iteration-count: infinite;
+}
+
+.down {
+	animation-name: down;
+	animation-duration: .4s;
+	animation-timing-function: steps(4, jump-end);
+	animation-iteration-count: infinite;
+}
+
+.right {
+	animation-name: right;
+	animation-duration: .4s;
+	animation-timing-function: steps(4, jump-end);
+	animation-iteration-count: infinite;
+}
+
+.left {
+	animation-name: left;
+	animation-duration: .4s;
+	animation-timing-function: steps(4, jump-end);
+	animation-iteration-count: infinite;
+}
+
+.up {
+	animation-name: up;
+	animation-duration: .4s;
+	animation-timing-function: steps(4, jump-end);
+	animation-iteration-count: infinite;
+}
+
+
+/* STEP 3b: To get the frame-by-frame animation effect, we add the steps() timing function */
+
+/* STEP 2: Create a keyframe rule that animates the background position of the sprite sheet */
+@keyframes down {
+	100% {
+		background-position-x: -240px;
+	}
+}
+
+/* STEP 4: Complete the animations for right, left and up (then proceed to the HTML file) */
+@keyframes right {
+	0% {
+		background-position-y: 232px;
+		background-position-x: 0px;
+	}
+
+	100% {
+		background-position-y: 232px;
+		background-position-x: -240px;
+	}
+}
+
+@keyframes left {
+	0% {
+		background-position-y: 155px;
+		background-position-x: 0px;
+	}
+
+	100% {
+		background-position-y: 155px;
+		background-position-x: -240px;
+	}
+}
+
+@keyframes up {
+	0% {
+		background-position-y: 77px;
+		background-position-x: 0px;
+	}
+
+	100% {
+		background-position-y: 77px;
+		background-position-x: -240px;
+	}
+}
+
+@keyframes go {
+	0% {background-position-y: 0px;}
+	100% {background-position-y: 310px;}
+}
