@@ -2,7 +2,6 @@
 
 body {
 	font-family: sans-serif;
-	border: 2px red solid;
 }
 
 /* STEP 1: Style the dude */
@@ -12,7 +11,7 @@ body {
 	top: 200px;
 	height: 77px;
 	width: 60px;
-	background: url("images/sprite-sheet.png");
+	background: url("../images/sprite-sheet.png");
 }
 
 /* STEP 3a: Add a class that binds the animation to the element (you'll need to manually add the class in the HTML) */
